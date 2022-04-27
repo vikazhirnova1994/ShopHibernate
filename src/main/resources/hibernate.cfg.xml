@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory  name="hibernate.cfg.xml">
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">2104V</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/shop_db</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="show_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="connection.autocommit">true</property>
+        <property name="spring.jpa.generate-ddl">true</property>
+        <property name="hibernate.jdbc.lob.non_contextual_creation">true</property>
+        <property name="java.naming.factory.initial">org.jnp.interfaces.NamingContextFactory</property>
+
+
+        <mapping class="entity.User"/>
+        <mapping class="entity.Role"/>
+
+        <mapping class="entity.ProductCategory"/>
+        <mapping class="entity.Product"/>
+        <mapping class="entity.Role"/>
+
+    </session-factory>
+</hibernate-configuration>
